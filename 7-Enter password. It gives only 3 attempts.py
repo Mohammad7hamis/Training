@@ -9,11 +9,10 @@ while cycle < 3:
     else:
         print("Wrong password")
         cycle += 1
-print("--------------")
+print("------------")
 if cycle == 3:
     print("Access denied")
-    
-    
+
 #   The user is prompted to enter a password.
 #   It gives the user only 3 attempts.
 #   If the user successfully enters "pass123",
