@@ -8,3 +8,8 @@ while True:
     
     else:
         print("Try Again")
+# This code prompts the user to enter a password. 
+# If the password is correct, 
+# it prints "Welcome." 
+# If it is incorrect, it prompts the user again. 
+# (Use while and if statements.)
