@@ -10,6 +10,6 @@ while cycle < 3:
     else:
         print("Wrong password")
         cycle += 1
-print("------------------")
+print("--------------")
 if cycle == 3:
     print("Access denied")
