@@ -26,3 +26,5 @@ print(value)
 # إرجاع قيمة الدالة 2
 res = div(13,1)
 print(res)
+
+prtint_numbers2(res+1)
