@@ -16,7 +16,14 @@ def multi(n1, n2):
 # إرجاع فيمة الدالة 2
 def div(num1, num2):
     return num1//num2
-
+# difference between (print) & (return)
+def square_print(numm1):
+    the_value = numm1*numm1
+    print(the_value)
+    
+def square_return(numm2):
+    return numm2*numm2
+    
 print_numbers1()
 prtint_numbers2(11)
 add(1, 10)
@@ -28,3 +35,7 @@ res = div(13,1)
 print(res)
 # تمرير مخرجات دالة إلى أخرى
 prtint_numbers2(res)
+# difference between (print) & (return)
+square_print(5)
+the__value = square_return(5)
+print(the__value)
