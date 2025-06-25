@@ -23,7 +23,19 @@ def square_print(numm1):
     
 def square_return(numm2):
     return numm2*numm2
-    
+# difference between (parameter) & (*parameter)
+def sum_list(numbers01):
+    total = 0
+    for n in numbers01:
+        total += n 
+    print("Sum: ", total)
+
+def sum_args(*numbers02):
+    total_1 = 0 
+    for s in numbers02:
+        total_1 += s
+    print("Sum: ", total_1)  
+         
 print_numbers1()
 prtint_numbers2(11)
 add(1, 10)
@@ -39,3 +51,6 @@ prtint_numbers2(res)
 square_print(5)
 the__value = square_return(5)
 print(the__value)
+
+sum_list([3, 5, 7])
+sum_args(3, 5, 7)
