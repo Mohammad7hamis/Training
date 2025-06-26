@@ -10,7 +10,7 @@ Print: "Student not found."
 '''
 def show_grade(grades, the_names):
     if the_names in grades:
-        print("Grade for", the_names, "is", grades[the_names], "." )
+        print("Grade for", the_names, "is", grades[the_names],".")
     else:
         print("Student not found.")
         
