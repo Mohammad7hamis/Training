@@ -11,7 +11,8 @@ def collect_short_names():
    short_names = []
    for n in range (number_of_student):
        name = input(f"Enter the number {n+1}: ")
-       short_names.append(name)
+       if len(name) < 5:
+           short_names.append(name)
    return short_names   
 result = collect_short_names()
 print("Short names", result)
