@@ -10,4 +10,8 @@ def collect_short_names():
    number_of_student = int(input("How many names? "))
    short_names = []
    for n in range (number_of_student):
-       name = input(f"Enter the number of {n+1}: ")
+       name = input(f"Enter the number {n+1}: ")
+       short_names.append(name)
+   return short_names   
+result = collect_short_names()
+print("Short names", result)
