@@ -12,7 +12,9 @@ def filter_passed_students():
                     "Sara": 78,
                     "Huda": 30 
                     }
-    for name,grade in student_name.items:
-        if student_name >= 50:
-            print(student_name)
-filter_passed_students()
+    for name, grade in student_name.items():
+        if grade >= 50:
+            passd_student[name] = grade
+    return passd_student
+result = filter_passed_students()
+print("Passed Students (",len(result), "):")
