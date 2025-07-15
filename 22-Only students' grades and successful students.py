@@ -18,3 +18,5 @@ def filter_passed_students():
     return passd_student
 result = filter_passed_students()
 print("Passed Students (",len(result), "):")
+for name, grade in result.items():
+    print(name, ":", grade)
