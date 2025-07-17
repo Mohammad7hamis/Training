@@ -19,7 +19,7 @@ def filter_sudents_inf():
                      "Sara": (78, "employee"),
                      "Huda": (66, "Student"),
                      "Zaid": (48, "Student"),
-                     "nabli": (96, "student")
+                     "Nabli": (96, "student")
     }
     for name, (grade, description) in student_info.items():
         if grade >= 50 and description.lower() == "student":
