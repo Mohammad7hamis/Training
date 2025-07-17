@@ -18,11 +18,13 @@ def filter_sudents_inf():
                      "Ali": (42, "Student"),
                      "Sara": (78, "employee"),
                      "Huda": (66, "Student"),
-                     "Zaid": (48, "Sudent") 
+                     "Zaid": (48, "Student"),
+                     "nabli": (96, "student")
     }
     for name, (grade, description) in student_info.items():
-        if grade >= 50 and description == "Student":
+        if grade >= 50 and description.lower() == "student":
             passed_student[name] = (grade, description)
+            
     return passed_student
 result = filter_sudents_inf()
 print("Passed Students: (",len(result), ")")
