@@ -27,4 +27,4 @@ for name, info in result.items():
     print("Grade:", info["grade"])
     print("Job:", info["job"])
     print("Age:", info["age"])
-    print("-" * 20)
+    print("-" * 15)
