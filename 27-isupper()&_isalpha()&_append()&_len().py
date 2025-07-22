@@ -20,4 +20,4 @@ def add():
             new_names.append(names)
     return new_names
 result = add()
-print(f"The Number of new name is : {len(result)} and the names ars : {result}")
+print(f"The Number of New Name Is : {len(result)} \nAnd The Names Are : {result}")
