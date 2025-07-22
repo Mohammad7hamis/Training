@@ -12,13 +12,14 @@ num_of_nambers =  int(input("How Many Names? "))
 correct_names = []
 def Correct_Valid_Names():
     for n in range(num_of_nambers):
-        names = input(f"Enter The Correct Name ! {n+1} ")
-        if( names[0].strip
-           #and names.capitalize 
-           #and names.isalpha
+        names = input(f"Enter Name ! {n+1} ")
+        
+        names = names.strip()
+        names = names.capitalize()
+        if (
+            names.isalpha()
         ):
             correct_names.append(names)
     return correct_names
 result = Correct_Valid_Names()
-print(result)
-#print(f"The Number Of Correct Number is : {len(result)} \nAnd The Names are : {result}")
+print(f"Total Correct Number is : {len(result)} \nAnd The Names are : {result}")
