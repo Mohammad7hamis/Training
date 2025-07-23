@@ -10,16 +10,25 @@ We verify that:
 * The city must be one of: "Riyadh" or "Jeddah" only.
 '''
 def students_info_filter():
-    number_of_student = int(input("How many student do want to add ? "))
+    number_of_student = int(input("How many student do want to add? "))
+    input_students = {}
     valid_students = {}
-    for name, info in number_of_student.itims():
-        names = input(f"Please Enter the name {name+1} : ")
-        age = int(input(f"Please Enter the age {name+1} : "))
-        city = input("Riyadh or Jeddah: ")
-        if names.capitalize() and names.isalpha():
-            valid_students[names] = age,city
-                
+    for names in range(number_of_student):
         
-    return valid_students
+        names = input(f"Please Enter the name of student {names+1} : ").strip().capitalize()
+        age = (input(f"Please Enter the age of student {names} : "))
+        city = input(f"From Which City Is {names}, form ? \nRiyadh or Jeddah : ").strip().capitalize()
+        
+        if not names.isalpha():
+            continue
+        
+        if not age.isdigit():
+            continue
+        age = int(age)
+        
+        if 18 <= age <= 25 and city in ['Riyadh', 'Jeddah']:
+            valid_students[names] = {'age': age, 'city': city}
+        return valid_students
 result = students_info_filter()
-print(result)
+for name, info in result.items():
+    print(f"Name: {name}, Age: {info['age']}, City: {info['city']}")
