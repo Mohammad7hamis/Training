@@ -1,12 +1,12 @@
-def ideal_student():
+def ideal_student_00():
     number_of_student = int(input("How many student do you want to add ? "))
     accepted_student = {}
     for name in range(number_of_student):
         input_student = input(f"Enter the name of student ({name+1}) ").strip().capitalize()
         input_grade = input(f"Enter the grade of student {input_student}: ").strip()
-        input_jop = input(f"Enter {input_student} jop: ").strip().capitalize()
-        input_city = input(f"Enter {input_student} city: ").strip().capitalize()
-        input_age = input(f"Enter {input_student} age: ")
+        input_jop = input(f"Enter {input_student} jop: ").strip().lower()
+        input_city = input(f"Enter {input_student} city: ").strip().title()
+        input_age = input(f"Enter {input_student} age: ").strip()
         
         if not input_student.isalpha():
             continue
@@ -23,7 +23,7 @@ def ideal_student():
         ):
             accepted_student[input_student] = {'grade':input_grade, 'city':input_city, 'age':input_age}
     return accepted_student
-result = ideal_student()
+result = ideal_student_00()
 print(f"📌 Number of accept stuednts 📌 ({len(result)})\n")
 print("----  🔍 Accept Students 🔎  ----")
 for name,info in result.items():
