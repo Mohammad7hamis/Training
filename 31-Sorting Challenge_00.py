@@ -21,13 +21,18 @@ def ideal_student_01():
           and input_job.lower() == "student" 
           and 18 <= input_age <= 25
         ):
-            Sorted_Students = dict(sorted(Sorted_Students.items(), key=lambda x: x[1], reverse=True))
-            Sorted_Students[input_name] = {'grade': input_grade, 'city': input_city, 'age': input_age,}
+            Sorted_Students[input_name] = {
+                'grade': input_grade, 
+                'city': input_city, 
+                'age': input_age,
+            }
+    # فرز البيانات بعد الانتهاء من جمع البيانات        
+    Sorted_Students = dict(sorted(Sorted_Students.items(), key=lambda x: x[1], reverse=True))
     return Sorted_Students
 result = ideal_student_01()
 print(f"📚 Sorted Students by Grade (High to Low): 📚 ({len(result)})\n")
-print("----  🔍 Sorted Students 🔎  ----")
+print("-----  🔍 Sorted Students 🔎  -----")
 for name, info in result.items():
     print(f"Name: {name}.\nGrade: {info['grade']}.\nCity: {info['city']}\nAge: {info['age']}")
     print("-"*31)
-print("--- 🔍 Sorted Students End 🔎 ---")
+print("-- 🔍 Sorted Students End 🔎 --")
