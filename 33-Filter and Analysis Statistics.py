@@ -42,10 +42,14 @@ if result:
     # العمليات الحسابية
     averge_grades = sum(grades) / len(grades)
     max_grades = max(grades)
+    # الطالب صاحب أعلى درجة
+    top_student = [name for name, info in result.items() if info['grade'] ==  max_grades][0]
+    # 
     
     print(f"📥 Number of accepted students: ({len(result)})📤\n")
     print(f"📈 Average grades: {averge_grades:.2f}📈")# رقمين فقط بعد الفاصلة العشرية
     print(f"🏆 Hightst grade: {max_grades} 🏆")
+    print(f"🏅 Top student is: {top_student} with grade: {max_grades}")
     print("-----  📬 Accepted Students Info 📬  -----")
 for name, info in result.items():
     print(f"Name: {name}.\nGender: {info['gender']}.\nGrade: {info['grade']}.\nCity: {info['city']}.\nAge: {info['age']}")
