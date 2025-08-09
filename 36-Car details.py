@@ -8,7 +8,7 @@ def car_details(name_of_car, model_of_car, *additional, **additional_specificati
         print("Details:")
         
         for key, value in additional_specifications.items():
-            print(f"{key}: {value}")
+            print(f"{key.capitalize()}: {value}")
 
 
-car_details("Toyota", "Corolla", "Sunroof", "Leather Seats", Color= "Red", Year= 2024)
+car_details("Toyota", "Corolla", "Sunroof", "Leather Seats", color= "Red", year= 2024)
